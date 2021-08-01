@@ -1,14 +1,14 @@
-CREATE TABLE Users (
-  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-  name VARCHAR(32) NOT NULL,
-  age INT NOT NULL
+create table members(
+  id integer primary key,
+  name text not null,
+  height integer not null,
+  gender char(1) not null
 );
 
-CREATE TABLE Posts (
-  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-  content VARCHAR(32) NOT NULL,
-  user_id INT NOT NULL,
-  FOREIGN KEY fk_userid(user_id) 
-  REFERENCES Users (id)
-  ON DELETE RESTRICT ON UPDATE RESTRICT
-);
+insert into members (id, name, height, gender) values
+(101, 'エレン', 170, 'M'),
+(102, 'ミカサ', 170, 'F'),
+(103, 'アルミン', 163, 'M'),
+(104, 'ジャン', 175, 'M'),
+(105, 'サシャ', 168, 'F'),
+(106, 'コニー', 158, 'M');
