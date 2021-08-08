@@ -6,6 +6,9 @@ services:
     restart: always
     volumes:
       - ./mysql/db:/docker-entrypoint-initdb.d
+      - ./mysql/test_db:/home
+    ports:
+        - "3306:3306"
     environment:
       MYSQL_DATABASE: sql_playground
       MYSQL_USER: sample
