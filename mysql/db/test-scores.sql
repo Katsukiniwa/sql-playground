@@ -14,24 +14,24 @@ insert into students (id, name, gender, class) values
 
 create table test_scores (
   student_id  integer  not null references students(id),
-  subject text not null, -- 教科(国語、算数、理科、社会)
+  subject text not null, -- 教科(kokugo、sansu、rika、syakai)
   score integer not null -- 点数 , primary key (student_id, subject)
 );
 
 insert into test_scores (student_id, subject, score) values -- まるこ
-(201, '国語', 60),
-(201, '算数', 40),
-(201, '理科', 40),
-(201, '社会', 50), 
-(202, '国語', 60),
-(202, '算数', 70),
-(202, '理科', 50),
-(202, '社会', 70),
-(203, '国語', 80),
-(203, '算数', 80),
-(203, '理科', 70),
-(203, '社会', 100),
-(204, '国語', 80),
-(204, '算数', 90),
-(204, '理科', 100)
-(204, '社会', 100);
+(201, 'kokugo', 60),
+(201, 'sansu', 40),
+(201, 'rika', 40),
+(201, 'syakai', 50), 
+(202, 'kokugo', 60),
+(202, 'sansu', 70),
+(202, 'rika', 50),
+(202, 'syakai', 70),
+(203, 'kokugo', 80),
+(203, 'sansu', 80),
+(203, 'rika', 70),
+(203, 'syakai', 100),
+(204, 'kokugo', 80),
+(204, 'sansu', 90),
+(204, 'rika', 100),
+(204, 'syakai', 100);
